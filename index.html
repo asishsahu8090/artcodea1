@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArtCodeA1 | Creative Studio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ArtCodeA1</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
 
 body{
-background:#0d0d0d;
+background:#0a0a0a;
 color:white;
+position:relative;
+}
+
+body:before{
+content:"";
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:800px;
+height:800px;
+background:url('logo.png') center/contain no-repeat;
+opacity:.05;
+z-index:-1;
 }
 
 header{
@@ -24,8 +33,6 @@ justify-content:space-between;
 align-items:center;
 padding:20px 10%;
 background:#111;
-position:sticky;
-top:0;
 }
 
 .logo{
@@ -36,12 +43,6 @@ gap:10px;
 
 .logo img{
 height:60px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
 }
 
 .hero{
@@ -55,14 +56,14 @@ padding:20px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:70px;
 color:#ff7b00;
 }
 
 .hero p{
-max-width:700px;
 margin-top:20px;
 font-size:20px;
+max-width:700px;
 }
 
 .btn{
@@ -72,7 +73,7 @@ padding:12px 25px;
 background:#ff7b00;
 color:white;
 text-decoration:none;
-border-radius:6px;
+border-radius:8px;
 }
 
 section{
@@ -82,7 +83,6 @@ padding:80px 10%;
 h2{
 text-align:center;
 margin-bottom:40px;
-font-size:40px;
 color:#ff7b00;
 }
 
@@ -95,17 +95,33 @@ gap:20px;
 .card{
 background:#181818;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
+border:1px solid #333;
 }
 
 .contact{
 text-align:center;
 }
 
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+}
+
 footer{
 background:#111;
-text-align:center;
 padding:20px;
+text-align:center;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:45px;}
 }
 </style>
 </head>
@@ -115,14 +131,8 @@ padding:20px;
 <header>
 <div class="logo">
 <img src="logo.png">
-<h2>ArtCodeA1</h2>
+<h3>ArtCodeA1</h3>
 </div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
 </header>
 
 <section class="hero">
@@ -136,56 +146,53 @@ Contact on WhatsApp
 </a>
 </section>
 
-<section id="services">
+<section>
 <h2>Our Services</h2>
 
 <div class="services">
 
 <div class="card">
 <h3>Graphic Design</h3>
-<p>Professional branding, posters, social media creatives and marketing materials.</p>
+<p>Branding, Posters and Social Media Designs.</p>
 </div>
 
 <div class="card">
 <h3>3D Modeling</h3>
-<p>Game-ready assets, product models and realistic 3D content.</p>
+<p>Game Assets and Product Visualization.</p>
 </div>
 
 <div class="card">
 <h3>Motion Graphics</h3>
-<p>Animated visuals, reels, intros and promotional videos.</p>
+<p>Professional Reels and Animations.</p>
 </div>
 
 <div class="card">
-<h3>Unreal Engine Development</h3>
-<p>Interactive experiences, visualization and game development.</p>
+<h3>Unreal Engine</h3>
+<p>Interactive Experiences and Games.</p>
 </div>
 
 <div class="card">
 <h3>Game Development</h3>
-<p>Game design, prototyping and gameplay systems.</p>
+<p>Gameplay Systems and Complete Projects.</p>
 </div>
 
 </div>
 </section>
 
-<section id="contact" class="contact">
+<section class="contact">
 <h2>Contact</h2>
-
 <p>📧 asishsahu8090@gmail.com</p>
 <br>
 <p>📱 +91 8090688076</p>
-
-<br>
-
-<a class="btn" href="mailto:asishsahu8090@gmail.com">
-Send Email
-</a>
 </section>
 
 <footer>
-© 2026 ArtCodeA1. All Rights Reserved.
+© ArtCodeA1 2026
 </footer>
+
+<a class="whatsapp" href="https://wa.me/918090688076">
+WhatsApp
+</a>
 
 </body>
 </html>
